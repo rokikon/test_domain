@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>{{ ::title }}</h2>
+    <div class="row">
+        <form name="domainForm" method="post">
+            <div class="input-field col s6">
+                <input ng-model="domain_url" id="domain_url" name='url' type="url" ng-class="error ? 'invalid' : valid ? 'valid': ''" class="validate">
+                <label style="width: 100%" data-error="Must start with 'https://'"  data-success="Successfully added!" for="domain_url">Domain URL</label>
+            </div>
+            <div class="col s12" style="margin-top: 20px">
+                <button ng-click="addDomain(domain_url)" class="btn waves-effect waves-light darken-1 blue" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

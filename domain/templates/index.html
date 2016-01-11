@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" ng-app="domainApp">
+<head>
+    <meta charset="UTF-8">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/controllers/app_controller.js' %}"></script>
+    <script src="{% static 'js/services/app_service.js' %}"></script>
+
+
+
+
+    <title></title>
+</head>
+<body>
+
+<!-- Navigation Bar Start -->
+<nav>
+    <div class="nav-wrapper darken-2 blue">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="left hide-on-med-and-down">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/add">Add Domain</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/add">Add Domain</a></li>
+        </ul>
+    </div>
+</nav>
+<!-- Navigation Bar End -->
+
+<!-- Main Content Start -->
+<div ng-view></div>
+<!-- Main Content End -->
+
+<script>
+    $(document).ready(function () {
+        $(".button-collapse").sideNav();
+    })
+</script>
+
+</body>
+</html>

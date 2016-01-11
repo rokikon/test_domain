@@ -1,0 +1,9 @@
+.idea/
+
+*.pyc
+*.swp
+#settings.py
+local_settings.py
+venv/
+media/
+new_template
